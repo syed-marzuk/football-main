@@ -1,0 +1,338 @@
+/* poppins font family  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* -----------------------------------------
+       common style
+--------------------------------------------  */
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color:#F3F3F3;
+}
+ .btn,.banner-btn{
+    color:#fff;
+    padding:1rem 2.4rem;
+    background-color: #E02C6D;
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+ }
+/* keyframes for animations start */
+ @keyframes right {
+    0%{
+        transform:translateX(100%);
+        opacity:0;
+    }
+    100%{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+ 
+ @keyframes left {
+     0%{
+         transform:translateX(-100%);
+         opacity:0;
+     }
+     100%{
+         transform:translateX(0);
+         opacity:1;
+     }
+ }
+ @keyframes bottom {
+     0%{
+         transform: translateY(100%);
+         opacity:0;
+     }
+     50%{
+         transform:translateY(-10%);
+         opacity:.7;
+     }
+     100%{
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+ /* keyframes animation end  */
+
+ .title{
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin:1.6rem 0 1rem;
+ }
+ .text{
+     text-align: justify;
+     color: #6C6C6C;
+     font-size: 1.6rem;
+     line-height: 2.6rem;
+     margin-bottom: 1.8rem;
+ }
+/*--------------------------------------------- 
+    header section
+    --------------------------------------------  */
+
+.header{
+    width: 100%;
+    height: 60rem;
+    background-color: #2E279A;
+    padding:4.2rem 14rem 8.6rem;
+}
+
+/* --------------------------------------
+nav start  
+----------------------------------------*/
+.nav{
+  display: flex;
+  justify-content: space-between;
+  color:#fff;
+  text-transform:capitalize;
+  font-size: 1.6rem;
+}
+.list{
+    width:58.7rem;
+    display: flex;
+    justify-content:space-between;
+}
+.item{
+   position:relative;
+}
+.item::before{
+    content: '';
+    position: absolute;
+    top:120%;
+    left:0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform .5s linear;
+}
+.item:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.login{
+   color:#fff;
+   font-weight: 400;
+   font-size: 1.6rem;
+}
+span{
+    margin-left: .8rem;
+}
+/*-----------------------------------------------
+       banner start
+---------------------------------------------------  */
+.banner{
+    display: flex;
+    margin-top:5rem;
+}
+.banner-text{
+   width: 48.5rem;
+   margin-top: 5rem;
+}
+.banner-head{
+   font-size: 6.4rem;
+   line-height: 8rem;
+   color:#fff;
+   margin-bottom: 2.7rem;
+   animation: left 1s ease-out;
+}
+.banner-image{
+  margin-left:auto;
+  animation: right 1s ease-in-out   ;
+}
+.banner-image img{
+    width:55.6rem;
+    height: 43.8rem;
+    transition:transform .5s linear;
+}
+.banner-image:hover img{
+    transform:scale(1.1);
+}
+.banner-btn{
+    display: inline-block;
+    animation: bottom 1.5s ease-in-out  ;
+    transition: transform .5s linear;
+}
+.banner-btn:hover{
+    transform: scale(1.3) skew(25deg);   
+}
+/*-----------------------------------------------
+         header end 
+------------------------------------------------- */
+/*-----------------------------------------------
+      main start
+---------------------------------------------- */
+.main{
+    width: 105rem;
+    margin:auto;
+}
+/*---------------------------------------------
+      players start 
+      --------------------------------------- */
+.players{
+    width:105rem;
+    margin:7rem auto;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-column-gap:3rem;
+grid-row-gap:2.7rem
+}
+.player{
+   background-color: #fff;
+   padding:1.5rem
+}
+.player-image{
+    width: 30rem;
+    overflow: hidden;
+}
+.player-image img{
+     width: 100%;
+     transition:transform .5s linear;
+}
+.player-image:hover img{
+    transform:scale(1.15);
+}
+/*---------------------------------------------
+       players end 
+---------------------------------------------- */
+/* ---------------------------------------------
+   news start
+   ---------------------------------------------  */
+.news-sections{
+   width: 105rem;
+   margin:7rem auto;
+}
+.news__title{
+   text-transform: capitalize;
+   display: inline-block;
+   font-size: 2.4rem;
+   font-weight: bold;
+   background-image: linear-gradient(to right bottom,rgb(166, 255, 0),tomato );
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;   
+}
+.news{
+  display: flex;
+}
+.latest-news{
+   padding:1.5rem;
+   background-color: #fff;
+   box-shadow: 1rem 1rem 3rem rgba(0,0,0,0.1);
+   border-radius: 5px;
+   margin-top: 5rem;
+}
+.latest-news:not(:last-child){
+    margin-right: 10%;
+}
+.news-photo{
+   width: 100%;
+   overflow:hidden;
+}
+.news-photo img{
+    width: 100%;
+    transition:transform .5s linear;
+}
+.news-photo:hover img{
+    transform:scale(1.15);
+}
+
+   /* ---------------------------------------------
+   news end
+   -------------------------------------------------  */
+/* ---------------------------------------------
+      partners start 
+------------------------------------------------ */
+.partner-section{
+    width: 105rem;
+    margin: 7rem auto;
+}
+.partners__title{
+    font-size: 2.4rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right bottom,rgba(9, 230, 28, 0.89),tomato);
+    -webkit-background-clip: text;
+    background-clip:text;
+    color:transparent;
+    text-align: center;
+    margin-bottom: 7rem;
+    text-transform: capitalize;
+}
+.partners{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-row-gap: 7rem;
+}
+.partnar{
+    text-align: center;
+}
+/*-----------------------------------------=--
+     Partner section start  
+--------------------------------------------------*/
+/*--------------------------------------------
+ main end 
+ -------------------------------------------- */
+ /* ----------------------------------------
+     footer start
+-------------------------------------------  */
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:6rem;
+}
+.footer__content{
+ display: flex;
+ flex-direction: column;
+ justify-content:center;
+ align-items: center;
+}
+.footer__content img{
+    width:48.3rem;
+    height: 11rem;
+    margin-bottom: 2rem;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    width: 3rem;
+    height: 3rem;
+    padding:.5rem;
+    margin-left: 1.4rem;
+    border-radius: 50%;
+    background-color: #969BAB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright{
+    margin-top: 2rem;
+   font-size: 1.8rem;
+   line-height: 2.4rem;
+}
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
